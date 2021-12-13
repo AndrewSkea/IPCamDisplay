@@ -1,0 +1,52 @@
+<body>
+  <style>
+    .all {
+      display: flex;
+      justify-content: center;
+      background: black;
+      border: solid #000;
+      border-width: 0 10px 10px 0;
+    }
+    .tl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 50%;
+      bottom: 50%;
+    }
+    .tr {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      right: 0;
+      bottom: 50%;
+    }
+    .bl {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 50%;
+      bottom: 0;
+    }
+    .br {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+
+  <div class="all tl">
+    <img src="{{ url_for('video_feed1') }}" height="100%" />
+  </div>
+  <div class="all tr">
+    <img src="{{ url_for('video_feed2') }}" width="100%" />
+  </div>
+  <div class="all bl">
+    <img src="{{ url_for('video_feed3') }}" width="100%" />
+  </div>
+  <div class="all br">
+    <img src="{{ url_for('video_feed4') }}" width="100%" />
+  </div>
+</body>
