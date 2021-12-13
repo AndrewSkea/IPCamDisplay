@@ -66,10 +66,8 @@ class CameraStream():
         self.cap.release()
 
 
-## Creating template directory to hold index.html in
-template_dir = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-template_dir = os.path.join(template_dir, 'templates')
-app = Flask(__name__, template_folder="/home/pi/templates")
+## Set templates directory
+app = Flask(__name__, template_folder="./templates")
 
 def get_urls():
     ## I used nmap to auto get IP address from network

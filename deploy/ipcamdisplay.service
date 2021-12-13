@@ -1,0 +1,13 @@
+[Unit]
+Description=IpCamDisplay
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/etc/ipcamdisplay
+ExecStart=python3 main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
