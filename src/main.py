@@ -82,7 +82,7 @@ def get_urls():
     if not cam_ips:
         lines = os.popen("sudo nmap -sn {}/24 | grep -E 'F[0-9]{8}'"
                         .format(base_ip)).readlines()
-        lines = [line[21:-3].replace("(", "").split(" ") for line in lines]
+        lines = [line[21:-2].replace("(", "").split(" ") for line in lines]
         for cam_id, cam_ip in lines:
             cam_ips[cam_id] = cam_ip
 
